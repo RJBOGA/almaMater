@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Coming Soon....</title>
+<title>Coming Soon</title>
 </head>
 <body>
 	<main>
-		<p>This service is coming soon</p>
+		<p>This service is coming soon...</p>
 		<p>
 			<a href="index.jsp">go back to home</a> to continue.
 		</p>

@@ -81,7 +81,14 @@ body {
 
 input[type=edit], input[type=submit], input[type=save], input[type=back]
 	{
-	background-color: #cf202e;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	margin-right: 10px;
+	display: block;
+	margin: 0 auto;
 }
 
 main {
@@ -122,6 +129,8 @@ button {
 	padding: 10px 20px;
 	cursor: pointer;
 	margin-right: 10px;
+	display: block;
+	margin: 0 auto;
 }
 
 button:hover {
@@ -191,7 +200,8 @@ button:hover {
 						id="address" name="address" value="<%=user.getAddress()%>">
 				</div>
 				<input type="submit" value="Save"> <a
-					href="user-profile.jsp"><input type="submit" value="Back"></a>
+					href="user-profile.jsp">
+					<br><input type="submit" value="Back"></a>
 
 			</form>
 			<%

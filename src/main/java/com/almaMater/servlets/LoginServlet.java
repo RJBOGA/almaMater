@@ -33,25 +33,10 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		final int defaultStudentId = -1;
 
-		Cookie[] cookies = request.getCookies();
-		int studentId = defaultStudentId;
+		int studentId = retrieveStudentIdFromCookie(request);
 
-		if (cookies != null) {
-			for (Cookie cookie : cookies) {
-				if (cookie.getName().equals("studentId")) {
-					try {
-						studentId = Integer.parseInt(cookie.getValue());
-						break;
-					} catch (NumberFormatException e) {
-						System.err.println("Error parsing studentId cookie value: " + e.getMessage());
-					}
-				}
-			}
-		}
-
-		if (studentId == defaultStudentId) {
+		if (studentId == -1) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
 			dispatcher.forward(request, response);
 		} else {
@@ -59,4 +44,23 @@ public class LoginServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 		}
 	}
+	
+	private int retrieveStudentIdFromCookie(HttpServletRequest request) {
+        int studentId = -1;
+        Cookie[] cookies = request.getCookies();
+
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("studentId")) {
+                    try {
+                        studentId = Integer.parseInt(cookie.getValue());
+                        break;
+                    } catch (NumberFormatException e) {
+                    	System.err.println( "Error parsing studentId cookie value "+ e);
+                    }
+                }
+            }
+        }
+        return studentId;
+    }
 }

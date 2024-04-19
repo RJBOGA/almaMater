@@ -28,6 +28,27 @@ header .logo {
 	height: 50px;
 	margin-right: 10px;
 }
+
+.button-container {
+	display: flex; /* Arrange buttons horizontally */
+	flex-wrap: wrap; /* Allow buttons to wrap if needed */
+	margin: 0 auto; /* Center the button container horizontally */
+}
+
+.button-container a {
+	background-color: #cf202e;
+	/* Add a thin border */
+	padding: 10px 20px; /* Add some padding inside the buttons */
+	margin: 5px; /* Add some space between buttons */
+	text-decoration: none; /* Remove underline from links */
+	color: #333; /* Text color */
+	font-family: sans-serif; /* Use a sans-serif font */
+	cursor: pointer; /* Indicate clickable behavior on hover */
+}
+
+.button-container a:hover {
+	background-color: #e0e0e0; /* Slightly darker background on hover */
+}
 </style>
 </head>
 <body>
@@ -39,14 +60,14 @@ header .logo {
 		</a>
 		<div class="user-options"></div>
 		<div class="button-container">
-			<a href="comingsoon-service.jsp">About</a>
-			<a> Request a LOR </a>
-			<a>Volunteer</a>
-			<a>Giving Back</a>
-			<a>Guest Lecture</a>
-			<a>More</a>
-			<a>UCMO.EDU</a>
-			<a>Other Services</a>
+			<a href="comingsoon-service.jsp">About</a> 
+			<a href="comingsoon-service.jsp"> Request a LOR </a> 
+			<a href="comingsoon-service.jsp">Volunteer</a>
+			<a href="comingsoon-service.jsp">Giving Back</a> 
+			<a href="comingsoon-service.jsp">Guest Lecture</a> 
+			<a href="comingsoon-service.jsp">More</a> 
+			<a href="https://www.ucmo.edu/">Official Website</a> 
+			<a href="comingsoon-service.jsp">Other Services</a>
 		</div>
 
 	</header>
